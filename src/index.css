@@ -74,7 +74,7 @@
 
   --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.3);
   --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.5);
-  --radius-card: 24px;
+  --radius-card: 25px;
 }
 
 html.light {
