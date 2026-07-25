@@ -99,7 +99,7 @@ export default function FacilitiesSection({ onOpenVirtualTour }) {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {facilities.map((fac, idx) => {
             const IconComponent = fac.icon;
             return (
@@ -117,7 +117,7 @@ export default function FacilitiesSection({ onOpenVirtualTour }) {
                     : 'bg-slate-900/90 border-white/15 text-white hover:border-brand-sky/40'
                 }`}
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-48 sm:h-56 overflow-hidden">
                   <img
                     src={fac.image}
                     alt={fac.title}

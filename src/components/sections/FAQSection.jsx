@@ -82,7 +82,7 @@ export default function FAQSection() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search questions or keywords..."
-              className={`w-full pl-12 pr-4 py-3 border rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all ${
+              className={`w-full pl-12 pr-4 py-3.5 border rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all min-h-[48px] ${
                 theme === 'light'
                   ? 'bg-slate-100/90 border-slate-300 text-slate-900 placeholder-slate-400 focus:bg-white'
                   : 'bg-slate-900/90 border-white/15 text-white placeholder-slate-400'
@@ -107,7 +107,7 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => setActiveId(isOpen ? null : faq.id)}
-                    className={`w-full p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-lg cursor-pointer transition-colors ${
+                    className={`w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-base sm:text-lg cursor-pointer transition-colors min-h-[52px] ${
                       theme === 'light' ? 'text-brand-slate hover:text-brand-blue' : 'text-white hover:text-brand-sky'
                     }`}
                   >

@@ -55,13 +55,13 @@ export default function ApplyModal({ isOpen, onClose }) {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className={`relative w-full max-w-2xl rounded-3xl border shadow-2xl overflow-hidden z-10 p-6 sm:p-8 ${
+          className={`relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl border shadow-2xl z-10 p-5 xs:p-6 sm:p-8 ${
             theme === 'light' ? 'bg-white border-slate-200 text-slate-900' : 'bg-brand-slate border-white/20 text-white'
           }`}
         >
           <button
             onClick={onClose}
-            className={`absolute top-5 right-5 p-2 rounded-xl transition-colors cursor-pointer ${
+            className={`absolute top-4 right-4 p-2.5 rounded-xl transition-colors cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center ${
               theme === 'light' ? 'bg-slate-100 text-slate-500 hover:text-slate-900' : 'bg-white/5 text-slate-400 hover:text-white'
             }`}
           >

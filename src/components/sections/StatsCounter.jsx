@@ -42,7 +42,7 @@ export default function StatsCounter() {
       theme === 'light' ? 'bg-slate-100/90 border-slate-200/80' : 'bg-brand-slate border-white/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -53,7 +53,7 @@ export default function StatsCounter() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -6 }}
-                className={`relative p-6 rounded-3xl border transition-all duration-300 group ${
+                className={`relative p-5 sm:p-6 rounded-3xl border transition-all duration-300 group ${
                   theme === 'light'
                     ? 'bg-white border-slate-200/90 text-slate-900 shadow-md hover:shadow-xl hover:border-brand-blue/30'
                     : 'bg-slate-900/80 border-white/10 text-white shadow-xl hover:border-brand-sky/40'

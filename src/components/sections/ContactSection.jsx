@@ -128,24 +128,24 @@ export default function ContactSection() {
 
           </div>
 
-          {/* Right Column: High-Impact Contact Form */}
-          <div className={`p-8 sm:p-10 rounded-3xl border shadow-2xl ${
-            theme === 'light' ? 'bg-slate-50 border-slate-200/90' : 'bg-slate-900/90 border-white/15'
+          {/* Right Column: Interactive Form */}
+          <div className={`p-5 sm:p-10 rounded-3xl border shadow-2xl backdrop-blur-xl ${
+            theme === 'light' ? 'bg-white border-slate-200 text-slate-900' : 'bg-slate-900/90 border-white/15 text-white'
           }`}>
             <h3 className={`font-heading text-2xl sm:text-3xl font-extrabold mb-2 ${
               theme === 'light' ? 'text-brand-slate' : 'text-white'
             }`}>
               Send Us a Message
             </h3>
-            <p className={`text-sm mb-8 ${
+            <p className={`text-sm mb-6 sm:mb-8 ${
               theme === 'light' ? 'text-slate-600 font-medium' : 'text-slate-300'
             }`}>
               Fill out the form below and an admissions counselor will reply within 24 hours.
             </p>
 
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div>
                     <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
                       Your Full Name *
@@ -156,7 +156,7 @@ export default function ContactSection() {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
                       placeholder="e.g. Sarah Jenkins"
-                      className={`w-full px-4 py-3.5 rounded-2xl border text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                      className={`w-full px-4 py-3.5 rounded-2xl border text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-blue min-h-[48px] ${
                         theme === 'light'
                           ? 'bg-white border-slate-300 text-slate-900 placeholder-slate-400'
                           : 'bg-slate-950 border-white/15 text-white placeholder-slate-500'

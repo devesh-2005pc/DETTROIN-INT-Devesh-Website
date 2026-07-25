@@ -58,12 +58,12 @@ export default function VirtualTourModal({ isOpen, onClose }) {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className={`relative w-full max-w-5xl rounded-3xl border shadow-2xl overflow-hidden z-10 flex flex-col max-h-[90vh] ${
+          className={`relative w-full max-w-5xl rounded-3xl border shadow-2xl overflow-hidden z-10 flex flex-col max-h-[92vh] ${
             theme === 'light' ? 'bg-white border-slate-200 text-slate-900' : 'bg-brand-slate border-white/15 text-white'
           }`}
         >
           {/* Header Bar */}
-          <div className={`flex items-center justify-between px-6 py-4 border-b ${
+          <div className={`flex items-center justify-between px-4 sm:px-6 py-4 border-b ${
             theme === 'light' ? 'bg-slate-50 border-slate-200' : 'bg-slate-900/50 border-white/10'
           }`}>
             <div className="flex items-center gap-3">
@@ -71,7 +71,7 @@ export default function VirtualTourModal({ isOpen, onClose }) {
                 <Compass className="w-5 h-5 animate-spin-slow" />
               </div>
               <div>
-                <h3 className={`font-heading font-bold text-lg flex items-center gap-2 ${
+                <h3 className={`font-heading font-bold text-base sm:text-lg flex flex-wrap items-center gap-2 ${
                   theme === 'light' ? 'text-brand-slate' : 'text-white'
                 }`}>
                   <span>360° Interactive Virtual Tour</span>
@@ -85,7 +85,7 @@ export default function VirtualTourModal({ isOpen, onClose }) {
 
             <button
               onClick={onClose}
-              className={`p-2 rounded-xl transition-colors cursor-pointer ${
+              className={`p-2.5 rounded-xl transition-colors cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 ${
                 theme === 'light' ? 'bg-slate-200/80 text-slate-600 hover:text-slate-900' : 'bg-white/5 text-slate-400 hover:text-white'
               }`}
             >
@@ -96,7 +96,7 @@ export default function VirtualTourModal({ isOpen, onClose }) {
           {/* Body content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 overflow-y-auto">
             {/* Main Visual Display */}
-            <div className="lg:col-span-2 relative min-h-[320px] sm:min-h-[420px] bg-slate-950 group">
+            <div className="lg:col-span-2 relative min-h-[280px] xs:min-h-[340px] sm:min-h-[420px] bg-slate-950 group">
               <img
                 src={activeSpot.image}
                 alt={activeSpot.title}
@@ -105,7 +105,7 @@ export default function VirtualTourModal({ isOpen, onClose }) {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-slate via-transparent to-black/30" />
 
               {/* Tag overlay */}
-              <div className="absolute top-4 left-4 flex items-center gap-2">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-2 flex-wrap">
                 <span className="px-3 py-1 rounded-full text-xs font-semibold bg-brand-blue text-white shadow-lg">
                   {activeSpot.category}
                 </span>
@@ -115,20 +115,20 @@ export default function VirtualTourModal({ isOpen, onClose }) {
               </div>
 
               {/* Interactive Hotspot Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/15 text-white">
-                <h4 className="font-heading text-xl font-bold text-white mb-1">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-4 sm:p-5 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/15 text-white">
+                <h4 className="font-heading text-lg sm:text-xl font-bold text-white mb-1">
                   {activeSpot.title}
                 </h4>
-                <p className="text-xs text-slate-300 leading-relaxed mb-3">
+                <p className="text-xs text-slate-300 leading-relaxed mb-3 line-clamp-2 sm:line-clamp-none">
                   {activeSpot.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] text-brand-sky font-semibold flex items-center gap-1">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[10px] sm:text-[11px] text-brand-sky font-semibold flex items-center gap-1">
                     <Sparkles className="w-3.5 h-3.5" /> High Precision 4K Spatial View
                   </span>
                   <button 
                     onClick={() => alert(`Starting 360° VR Mode for ${activeSpot.title}...`)}
-                    className="px-4 py-1.5 rounded-lg bg-brand-blue hover:bg-blue-600 text-white text-xs font-medium transition-all shadow-md cursor-pointer"
+                    className="px-3.5 py-1.5 rounded-lg bg-brand-blue hover:bg-blue-600 text-white text-xs font-medium transition-all shadow-md cursor-pointer shrink-0 min-h-[36px]"
                   >
                     Enter 360° VR
                   </button>
@@ -137,7 +137,7 @@ export default function VirtualTourModal({ isOpen, onClose }) {
             </div>
 
             {/* Side Navigation for Hotspots */}
-            <div className={`p-6 border-l space-y-4 ${
+            <div className={`p-4 sm:p-6 border-t lg:border-t-0 lg:border-l space-y-4 ${
               theme === 'light' ? 'bg-slate-50 border-slate-200' : 'bg-slate-900/60 border-white/10'
             }`}>
               <h4 className={`font-heading text-sm font-bold uppercase tracking-wider mb-2 ${

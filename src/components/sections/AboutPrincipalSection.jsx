@@ -117,7 +117,7 @@ export default function AboutPrincipalSection() {
               <button
                 key={profile.id}
                 onClick={() => setActiveTab(profile.id)}
-                className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer min-h-[44px] flex items-center justify-center ${
                   activeTab === profile.id
                     ? 'bg-brand-blue text-white shadow-lg shadow-brand-blue/30'
                     : theme === 'light' ? 'text-slate-700 hover:text-brand-slate' : 'text-slate-300 hover:text-white'
@@ -128,7 +128,7 @@ export default function AboutPrincipalSection() {
             ))}
             <button
               onClick={() => setActiveTab('values')}
-              className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer min-h-[44px] flex items-center justify-center ${
                 activeTab === 'values'
                   ? 'bg-brand-blue text-white shadow-lg shadow-brand-blue/30'
                   : theme === 'light' ? 'text-slate-700 hover:text-brand-slate' : 'text-slate-300 hover:text-white'
@@ -148,7 +148,7 @@ export default function AboutPrincipalSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               {/* Portrait Placeholder */}
               <div className="lg:col-span-5 relative">
@@ -156,7 +156,7 @@ export default function AboutPrincipalSection() {
                   theme === 'light' ? 'border-white bg-slate-100' : 'border-white/15 bg-slate-900'
                 }`}>
                   {/* Gradient avatar placeholder */}
-                  <div className={`w-full h-[450px] bg-gradient-to-br ${activeProfile.gradient} flex flex-col items-center justify-center relative`}>
+                  <div className={`w-full h-[300px] xs:h-[360px] sm:h-[450px] bg-gradient-to-br ${activeProfile.gradient} flex flex-col items-center justify-center relative`}>
                     {/* Decorative pattern overlay */}
                     <div className="absolute inset-0 opacity-10">
                       <div className="absolute top-8 left-8 w-24 h-24 border-2 border-white rounded-full" />

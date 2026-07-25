@@ -56,7 +56,7 @@ export default function AdmissionsCalculator({ onOpenApplyModal }) {
         }`}>
           
           {/* Controls Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 space-y-6">
+          <div className="lg:col-span-7 p-5 sm:p-10 space-y-5 sm:space-y-6">
             <div>
               <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
                 1. Select Academic Grade Level
@@ -69,7 +69,7 @@ export default function AdmissionsCalculator({ onOpenApplyModal }) {
                     <button
                       key={key}
                       onClick={() => setSelectedGrade(key)}
-                      className={`w-full p-4 rounded-2xl text-left border text-sm font-bold transition-all flex items-center justify-between ${
+                      className={`w-full p-4 rounded-2xl text-left border text-xs sm:text-sm font-bold transition-all flex items-center justify-between cursor-pointer min-h-[48px] ${
                         isSelected
                           ? 'bg-brand-blue text-white border-brand-blue shadow-md'
                           : theme === 'light'

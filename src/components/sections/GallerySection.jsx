@@ -89,7 +89,7 @@ export default function GallerySection({ onOpenLightbox }) {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer min-h-[44px] flex items-center justify-center ${
                   filter === cat
                     ? 'bg-brand-blue text-white shadow-md shadow-brand-blue/30'
                     : theme === 'light'
@@ -104,7 +104,7 @@ export default function GallerySection({ onOpenLightbox }) {
         </div>
 
         {/* Gallery Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           <AnimatePresence>
             {filteredItems.map((item) => (
               <motion.div
@@ -122,7 +122,7 @@ export default function GallerySection({ onOpenLightbox }) {
                 <img
                   src={item.src}
                   alt={item.title}
-                  className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-60 sm:h-72 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6 text-white" />
 

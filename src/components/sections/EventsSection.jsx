@@ -103,17 +103,17 @@ export default function EventsSection() {
               Annual IB Science & AI Olympiad
             </h4>
 
-            <div className="grid grid-cols-4 gap-3 text-center">
+            <div className="grid grid-cols-2 xs:grid-cols-4 gap-2.5 sm:gap-3 text-center">
               {[
                 { label: 'Days', val: timeLeft.days },
                 { label: 'Hours', val: timeLeft.hours },
                 { label: 'Mins', val: timeLeft.minutes },
                 { label: 'Secs', val: timeLeft.seconds },
               ].map((item, idx) => (
-                <div key={idx} className={`p-3 rounded-2xl border ${
+                <div key={idx} className={`p-2.5 sm:p-3 rounded-2xl border ${
                   theme === 'light' ? 'bg-slate-100 border-slate-200' : 'bg-white/5 border-white/10'
                 }`}>
-                  <div className={`font-heading font-extrabold text-2xl ${
+                  <div className={`font-heading font-extrabold text-xl sm:text-2xl ${
                     theme === 'light' ? 'text-brand-slate' : 'text-white'
                   }`}>
                     {String(item.val).padStart(2, '0')}
@@ -130,23 +130,23 @@ export default function EventsSection() {
         </div>
 
         {/* Events Timeline */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {upcomingEvents.map((evt) => (
             <motion.div
               key={evt.id}
               whileHover={{ scale: 1.01 }}
-              className={`p-6 sm:p-8 rounded-3xl border shadow-xl transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 ${
+              className={`p-5 sm:p-8 rounded-3xl border shadow-xl transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6 ${
                 theme === 'light'
                   ? 'bg-white border-slate-200/90 text-slate-900 hover:border-brand-blue/40 shadow-md'
                   : 'bg-slate-900/80 border-white/10 hover:border-brand-sky/40 text-white shadow-xl'
               }`}
             >
-              <div className="flex items-start sm:items-center gap-6">
+              <div className="flex flex-col xs:flex-row items-start xs:items-center gap-4 sm:gap-6 w-full sm:w-auto">
                 {/* Date Badge */}
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-sky p-0.5 shrink-0 shadow-lg shadow-brand-blue/30">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-sky p-0.5 shrink-0 shadow-lg shadow-brand-blue/30">
                   <div className="w-full h-full bg-brand-slate rounded-[14px] flex flex-col items-center justify-center text-white">
-                    <span className="font-heading font-extrabold text-2xl text-white">{evt.day}</span>
-                    <span className="text-[11px] font-bold uppercase text-brand-sky">{evt.month}</span>
+                    <span className="font-heading font-extrabold text-xl sm:text-2xl text-white">{evt.day}</span>
+                    <span className="text-[10px] sm:text-[11px] font-bold uppercase text-brand-sky">{evt.month}</span>
                   </div>
                 </div>
 

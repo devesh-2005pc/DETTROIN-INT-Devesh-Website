@@ -67,7 +67,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Achievement Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {achievementCategories.map((item, i) => {
             const IconComponent = item.icon;
             return (
@@ -78,7 +78,7 @@ export default function AchievementsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -8 }}
-                className={`p-6 rounded-3xl border hover:border-amber-400/50 transition-all duration-300 group flex flex-col justify-between ${
+                className={`p-5 sm:p-6 rounded-3xl border hover:border-amber-400/50 transition-all duration-300 group flex flex-col justify-between ${
                   theme === 'light'
                     ? 'bg-slate-50 border-slate-200/90 text-slate-900 shadow-md hover:shadow-xl'
                     : 'bg-slate-900/80 border-white/15 text-white shadow-2xl'

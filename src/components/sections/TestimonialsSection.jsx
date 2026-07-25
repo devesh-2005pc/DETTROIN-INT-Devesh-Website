@@ -82,17 +82,17 @@ export default function TestimonialsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4 }}
-              className={`p-8 sm:p-12 rounded-3xl border shadow-2xl backdrop-blur-xl relative ${
+              className={`p-5 xs:p-7 sm:p-12 rounded-3xl border shadow-2xl backdrop-blur-xl relative ${
                 theme === 'light'
                   ? 'bg-white border-slate-200 text-slate-900'
                   : 'bg-slate-900/90 border-white/15 text-white'
               }`}
             >
               {/* Role label badge */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
                 <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(active.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                   ))}
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-bold border ${
@@ -102,28 +102,28 @@ export default function TestimonialsSection() {
                 </span>
               </div>
 
-              <blockquote className={`font-heading text-xl sm:text-2xl font-semibold leading-relaxed mb-8 ${
+              <blockquote className={`font-heading text-base sm:text-2xl font-semibold leading-relaxed mb-6 sm:mb-8 ${
                 theme === 'light' ? 'text-slate-800' : 'text-slate-100'
               }`}>
                 "{active.quote}"
               </blockquote>
 
-              <div className={`flex items-center gap-4 pt-6 border-t ${
+              <div className={`flex items-center gap-3.5 sm:gap-4 pt-5 sm:pt-6 border-t ${
                 theme === 'light' ? 'border-slate-200' : 'border-white/10'
               }`}>
                 {/* Gradient avatar placeholder */}
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${active.gradient} flex items-center justify-center border-2 shadow-md ${
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${active.gradient} flex items-center justify-center border-2 shadow-md shrink-0 ${
                   theme === 'light' ? 'border-white' : 'border-white/30'
                 }`}>
-                  <span className="font-heading font-black text-2xl text-white">{active.initial}</span>
+                  <span className="font-heading font-black text-xl sm:text-2xl text-white">{active.initial}</span>
                 </div>
                 <div>
-                  <div className={`font-heading font-bold text-lg ${
+                  <div className={`font-heading font-bold text-base sm:text-lg ${
                     theme === 'light' ? 'text-brand-slate' : 'text-white'
                   }`}>
                     {active.role}
                   </div>
-                  <div className="text-xs text-brand-blue dark:text-brand-sky font-bold">
+                  <div className="text-[11px] sm:text-xs text-brand-blue dark:text-brand-sky font-bold">
                     Name to be updated — Excellence International School
                   </div>
                 </div>
@@ -132,8 +132,8 @@ export default function TestimonialsSection() {
           </AnimatePresence>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-between mt-8">
-            <div className="flex gap-2">
+          <div className="flex items-center justify-between mt-6 sm:mt-8">
+            <div className="flex gap-2 items-center">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
@@ -147,10 +147,10 @@ export default function TestimonialsSection() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={handlePrev}
-                className={`p-3 rounded-full backdrop-blur-md transition-all cursor-pointer ${
+                className={`p-3 rounded-full backdrop-blur-md transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center ${
                   theme === 'light'
                     ? 'bg-slate-200/80 hover:bg-slate-300 text-slate-800'
                     : 'bg-white/10 hover:bg-white/20 text-white'
@@ -160,7 +160,7 @@ export default function TestimonialsSection() {
               </button>
               <button
                 onClick={handleNext}
-                className={`p-3 rounded-full backdrop-blur-md transition-all cursor-pointer ${
+                className={`p-3 rounded-full backdrop-blur-md transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center ${
                   theme === 'light'
                     ? 'bg-slate-200/80 hover:bg-slate-300 text-slate-800'
                     : 'bg-white/10 hover:bg-white/20 text-white'

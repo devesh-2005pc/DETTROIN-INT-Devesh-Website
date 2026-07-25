@@ -81,7 +81,7 @@ export default function FacultySection() {
         </div>
 
         {/* Faculty Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {faculty.map((teacher, idx) => {
             const IconComponent = teacher.icon;
             return (
@@ -100,7 +100,7 @@ export default function FacultySection() {
                 }`}
               >
                 {/* Gradient avatar area */}
-                <div className={`relative h-64 bg-gradient-to-br ${teacher.gradient} flex flex-col items-center justify-center`}>
+                <div className={`relative h-52 sm:h-64 bg-gradient-to-br ${teacher.gradient} flex flex-col items-center justify-center`}>
                   {/* Decorative rings */}
                   <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute -top-6 -right-6 w-28 h-28 border-2 border-white/10 rounded-full" />

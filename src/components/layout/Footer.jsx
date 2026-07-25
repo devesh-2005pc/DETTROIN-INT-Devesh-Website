@@ -245,7 +245,7 @@ export default function Footer({ onOpenApplyModal }) {
         </div>
 
         {/* Bottom Row */}
-        <div className={`pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs ${
+        <div className={`pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-center md:text-left ${
           theme === 'light' ? 'text-slate-500' : 'text-slate-400'
         }`}>
           <div>
@@ -265,7 +265,7 @@ export default function Footer({ onOpenApplyModal }) {
                 <a
                   key={i}
                   href={social.href}
-                  className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all hover:bg-brand-blue hover:border-brand-blue hover:text-white ${
+                  className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all hover:bg-brand-blue hover:border-brand-blue hover:text-white ${
                     theme === 'light'
                       ? 'bg-white border-slate-300 text-slate-600 shadow-sm'
                       : 'bg-white/5 border-white/10 text-slate-300'
@@ -281,7 +281,7 @@ export default function Footer({ onOpenApplyModal }) {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className={`flex items-center gap-2 px-4 py-2 border rounded-full transition-all group cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-2.5 border rounded-full transition-all group cursor-pointer min-h-[44px] ${
               theme === 'light'
                 ? 'bg-white border-slate-300 text-slate-600 hover:bg-slate-200 hover:text-brand-slate shadow-sm'
                 : 'bg-white/5 border-white/15 text-slate-300 hover:bg-white/10 hover:text-white'
