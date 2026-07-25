@@ -8,13 +8,13 @@
 
 **Full Name:** Devesh Chaudhari
 
-**Intern ID:** *<Your Intern ID>*
+**Intern ID:** NA
 
 **Email:** deveshpc2005k@gmail.com
 
 **GitHub Username:** Devesh-2005pc
 
-**GitHub Repository:** 
+**GitHub Repository:** https://github.com/devesh-2005pc/DETTROIN-INT-Devesh-Website.git
 
 **Live Demo:** https://dettroin-int-devesh-website.vercel.app/
 
